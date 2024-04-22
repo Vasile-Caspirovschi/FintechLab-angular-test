@@ -1,0 +1,40 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.login-form-container{
+    max-width: 500px;
+    width: 100%;
+    padding: 0.5rem 3rem;
+}
+
+.login-form-container-header{
+    text-align: center ;
+    width: 100%;
+}
+
+.login-form-container-header h3{
+    text-align: center ;
+}
+
+.login-form-forgot-password
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.login-form button
+{
+    margin-bottom: 0.5rem;
+    height: 50px;
+}

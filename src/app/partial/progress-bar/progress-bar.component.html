@@ -1,0 +1,10 @@
+<div class="target">
+    <div class="info">
+        <span>{{title}}</span>
+        <span>{{percent}}</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress-bar back" [style.backgroundColor]="color"></div>
+        <div class="progress-bar front" [style.width]="percent" [style.backgroundColor]="color"></div>
+    </div>
+</div>

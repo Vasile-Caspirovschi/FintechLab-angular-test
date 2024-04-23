@@ -5,7 +5,7 @@
     /* grid-auto-rows: minmax(100px, auto); */
 }
 
-.stats {
+.d-flex-column {
     display: flex;
     flex-direction: column;
 }
@@ -60,57 +60,7 @@
     margin-bottom: 2rem;
 }
 
-.target .info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-}
 
-.progress {
-    height: 15px;
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.progress.blue {
-    background-color: #2962ff73;
-}
-
-
-.progress-bar.blue {
-    background-color: #2962ff;
-}
-
-.progress-bar.red {
-    background-color: #ff3d00;
-}
-
-.progress-bar.yellow {
-    background-color: #ffc400;
-}
-
-.progress.red {
-    background-color: #ff3c005d;
-}
-
-.progress.yellow {
-    background-color: #ffc40081;
-}
-
-.views-chart .title {
-    text-align: center;
-}
-
-.views-chart .title p {
-    margin-bottom: 0.5rem;
-}
 
 .notification {
     color: white;

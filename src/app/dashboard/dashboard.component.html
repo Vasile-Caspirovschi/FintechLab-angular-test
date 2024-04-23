@@ -1,7 +1,7 @@
 <div class="content">
     <p>Hi {{loggedUser?.fullname}},<br>Welcome back!</p>
 
-    <div class="stats">
+    <div class="d-flex-column">
         <mat-card class="stat">
             <div class="circle blue">
                 <svg>
@@ -49,38 +49,13 @@
     <div>
         <mat-card class="targets">
             <h3>Targets</h3>
-            <div class="target">
-                <div class="info">
-                    <span>Views</span>
-                    <span>75%</span>
-                </div>
-                <div class="progress blue">
-                    <div class="progress-bar blue" style="width: 50%;"></div>
-                </div>
-            </div>
-            <div class="target">
-                <div class="info">
-                    <span>Views</span>
-                    <span>75%</span>
-                </div>
-                <div class="progress yellow">
-                    <div class="progress-bar yellow" style="width: 26%;"></div>
-                </div>
-            </div>
-            <div class="target">
-                <div class="info">
-                    <span>Views</span>
-                    <span>75%</span>
-                </div>
-                <div class="progress red">
-                    <div class="progress-bar red" style="width: 70%;"></div>
-                </div>
-            </div>
+            <app-progress-bar title="Views" percent="45%" color="#2962ff"></app-progress-bar>
+            <app-progress-bar title="Followers" percent="50%" color="#ffc400"></app-progress-bar>
+            <app-progress-bar title="Income" percent="75%" color="#ff3d00"></app-progress-bar>
         </mat-card>
     </div>
 
-
-    <mat-card style="background-color: #2962ff;">
+    <mat-card style="background-color: #2962ff; height: 200px;">
         <div class="notification">
             <div class="circle">
                 <svg>
@@ -94,44 +69,12 @@
         </div>
     </mat-card>
 
-    <div class="views-chart">
-        <mat-card>
-            <div class="title">
-                <p>Views</p>
-                <h3>6.967.431</h3>
-            </div>
-            <canvas id="lineChart" width="400" height="200"></canvas>
-        </mat-card>
-    </div>
+    <app-viewschart></app-viewschart>
 
-    <div class="stats" style="height: 200px;">
-        <h3 style="margin-bottom: 1rem;">Meetings</h3>
-        <mat-card class="stat">
-            <div class="circle">
-                <img src="" alt="face">
-            </div>
-            <div class="stack">
-                <div>Emmy Anderson</div>
-                <div>8:00 - 10:00</div>
-            </div>
-        </mat-card>
-        <mat-card class="stat">
-            <div class="circle">
-                <img src="" alt="face">
-            </div>
-            <div class="stack">
-                <div>Emmy Anderson</div>
-                <div>8:00 - 10:00</div>
-            </div>
-        </mat-card>
-        <mat-card class="stat">
-            <div class="circle">
-                <img src="" alt="face">
-            </div>
-            <div class="stack">
-                <div>Emmy Anderson</div>
-                <div>8:00 - 10:00</div>
-            </div>
-        </mat-card>
+    <div class="d-flex-column">
+        <h3>Meetings</h3>
+        <app-meeting></app-meeting>
+        <app-meeting></app-meeting>
+        <app-meeting></app-meeting>
     </div>
 </div>

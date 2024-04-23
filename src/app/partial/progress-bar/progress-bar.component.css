@@ -1,0 +1,33 @@
+.progress-bar {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    height: 15px;
+}
+
+.progress-bar .back,
+.progress-bar .front {
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-bar .back {
+    opacity: 0.5;
+    width: 100%;
+}
+
+.progress-bar .front {
+    z-index: 1;
+}
+
+.target .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.target{
+    margin-bottom: 1rem;
+}

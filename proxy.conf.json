@@ -1,0 +1,11 @@
+{
+  "/api/random-numbers": {
+    "target": "http://www.randomnumberapi.com/api/v1.0/random",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/random-numbers": "/"
+    }
+  }
+}

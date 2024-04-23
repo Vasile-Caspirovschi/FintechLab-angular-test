@@ -1,8 +1,4 @@
 <div class="sidebar">
-    <div class="sidebar-logo">
-        <h3>Dashboard</h3>
-    </div>
-
     <div class="sidebar-navigation">
         <ul class="vertical-menu">
             <li>
@@ -14,36 +10,42 @@
             </li>
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
-                    data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    data-testid="BarChartIcon">
+                    <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"></path>
                 </svg>
                 <span>Dashboard</span>
             </li>
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                     data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    <path
+                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z">
+                    </path>
                 </svg>
                 <span>Users</span>
             </li>
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                     data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    <path
+                        d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z">
+                    </path>
                 </svg>
                 <span>Calendar</span>
             </li>
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                     data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    <path d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3z"></path>
                 </svg>
                 <span>Projects</span>
             </li>
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                     data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6.99 15c-.7 0-1.26-.56-1.26-1.26 0-.71.56-1.25 1.26-1.25.71 0 1.25.54 1.25 1.25-.01.69-.54 1.26-1.25 1.26zm3.01-7.4c-.76 1.11-1.48 1.46-1.87 2.17-.16.29-.22.48-.22 1.41h-1.82c0-.49-.08-1.29.31-1.98.49-.87 1.42-1.39 1.96-2.16.57-.81.25-2.33-1.37-2.33-1.06 0-1.58.8-1.8 1.48l-1.65-.7C9.01 7.15 10.22 6 11.99 6c1.48 0 2.49.67 3.01 1.52.44.72.7 2.07.02 3.08z">
+                    </path>
                 </svg>
                 <span>Help</span>
             </li>
@@ -55,16 +57,20 @@
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                     data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                    </path>
                 </svg>
                 <span>{{loggedUser?.fullname}}</span>
             </li>
             <li>
                 <svg class="sidebar-navigation-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                     data-testid="HomeIcon">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                    <path
+                        d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z">
+                    </path>
                 </svg>
-                <span>Setting</span>
+                <span>Settings</span>
             </li>
         </ul>
     </div>

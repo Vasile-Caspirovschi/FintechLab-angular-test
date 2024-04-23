@@ -25,7 +25,6 @@ export class MeetingComponent implements OnInit {
   ngOnInit(): void {
     this.randomUser.getRandomUser().subscribe(user => {
       this.user = user;
-      console.log(this.user);
     });
   }
 }

@@ -10,13 +10,6 @@
     flex-direction: column;
 }
 
-.stat {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0 0.5rem 0;
-    padding: 24px;
-    align-items: center;
-}
 
 .circle svg {
     fill: white;
@@ -36,18 +29,6 @@
     margin-right: 10px;
 }
 
-.circle.blue {
-    background-color: #2962ff;
-}
-
-.circle.red {
-    background-color: #ff3d00;
-}
-
-.circle.yellow {
-    background-color: #ffc400;
-}
-
 .targets {
     padding: 24px;
 }
@@ -55,11 +36,6 @@
 .targets h3 {
     margin-bottom: 1rem;
 }
-
-.target {
-    margin-bottom: 2rem;
-}
-
 
 
 .notification {

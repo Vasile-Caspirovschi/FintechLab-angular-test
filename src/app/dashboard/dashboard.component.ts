@@ -9,6 +9,7 @@ import { selectLoggedUser } from '../store/user/selectors';
 import { ViewschartComponent } from '../partial/viewschart/viewschart.component';
 import { MeetingComponent } from '../partial/meeting/meeting.component';
 import { ProgressBarComponent } from '../partial/progress-bar/progress-bar.component';
+import { RatingComponent } from '../partial/rating/rating.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -19,7 +20,8 @@ import { ProgressBarComponent } from '../partial/progress-bar/progress-bar.compo
     MatButtonModule,
     ViewschartComponent,
     MeetingComponent,
-    ProgressBarComponent],
+    ProgressBarComponent,
+    RatingComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

@@ -6,7 +6,6 @@
 }
 
 .sidebar {
-    position: fixed;
     padding: 0.5rem;
     display: flex;
     height: 100vh;

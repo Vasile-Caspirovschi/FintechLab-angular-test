@@ -14,8 +14,6 @@ export class RandomUserService {
   getRandomUser(): Observable<RandomUser> {
     return this.http.get(this.baseUrl).pipe(
       map((response: any) => {
-        console.log(response);
-
         const user = response.results[0];
         return {
           fullname: `${user.name.first} ${user.name.last}`,

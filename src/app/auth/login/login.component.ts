@@ -42,8 +42,4 @@ export class LoginComponent {
     this.store.dispatch(login({ user: this.user }));
     this.router.navigateByUrl('/dashboard');
   }
-
-  logout() {
-    this.store.dispatch(logout());
-  }
 }

@@ -1,5 +1,5 @@
 .navbar {
     padding: 10px 20px;
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
 }

@@ -18,7 +18,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.pipe(select(selectLoggedUser)).subscribe(user => {
-      console.log("user", user);
       this.loggedUser = user;
     });
   }

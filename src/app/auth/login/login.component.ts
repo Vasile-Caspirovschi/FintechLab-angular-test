@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCard } from '@angular/material/card';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardHeader } from '@angular/material/card';
 import { MatCardTitle } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { User } from '../../store/user/user.interface';
 import { Store } from '@ngrx/store';
-import { login, logout } from '../../store/actions';
+import { login } from '../../store/actions';
 import { Router } from '@angular/router';
 import { UserState } from '../../store/user/state';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -22,12 +23,15 @@ import { UserState } from '../../store/user/state';
     MatCard,
     MatCardHeader,
     MatCardTitle,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
   user: User;
 
   constructor(private store: Store<{ auth: UserState }>, private router: Router) {
@@ -36,10 +40,26 @@ export class LoginComponent {
       fullname: '',
       password: ''
     };
+
+    this.loginForm = new FormGroup({
+      email: new FormControl(''),
+      fullname: new FormControl(''),
+      password: new FormControl(''),
+    });
+  }
+
+  ngOnInit(): void {
+    this.loginForm.valueChanges.subscribe(value => {
+      this.user = value;
+    });
   }
 
   login() {
-    this.store.dispatch(login({ user: this.user }));
-    this.router.navigateByUrl('/dashboard');
+    if (this.loginForm.valid) {
+      console.log(this.user);
+      
+      this.store.dispatch(login({ user: this.user }));
+      this.router.navigateByUrl('/dashboard');
+    }
   }
 }

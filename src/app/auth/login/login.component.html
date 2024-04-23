@@ -5,26 +5,42 @@
         <h3>Login</h3>
       </mat-card-title>
     </mat-card-header>
-    <form #form="ngForm">
-      <mat-form-field>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <mat-form-field appearance="fill">
         <mat-label>Enter email</mat-label>
-        <input matInput [(ngModel)]="user.email" name="email" placeholder="Email">
+        <input matInput type="text" id="email" formControlName="email" class="form-control"
+          name="email" required placeholder="Email">
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Enter fullname</mat-label>
-        <input matInput [(ngModel)]="user.fullname" name="fullname" placeholder="Fullname">
+        <input matInput type="text" id="fullname" formControlName="fullname" class="form-control"
+           name="fullname" required placeholder="Fullname">
+        <mat-error *ngIf="loginForm.get('fullname')?.hasError('required')">
+          Full name is required
+        </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Enter password</mat-label>
-        <input matInput type="password" [(ngModel)]="user.password" name="password" placeholder="Password">
+        <input matInput type="password" formControlName="password" class="form-control" id="password"
+           required name="password" placeholder="Password">
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+          Password is required
+        </mat-error>
       </mat-form-field>
 
       <div class="login-form-forgot-password">
         <a href="#">Forgot password?</a>
       </div>
-      <button class="login-form-submit-button" (click)="login()" mat-flat-button color="primary">Sign in</button>
+
+      <button class="login-form-submit-button" [type]="'submit'" mat-flat-button color="primary">
+        Signin
+      </button>
+
       <button class="login-form-submit-button" mat-button>Sign up</button>
     </form>
   </mat-card>

@@ -1,22 +1,32 @@
-.wrapper{
-    display: flex;
+.wrapper {
+    /* display: flex; */
+    /* height: 100vh; */
+    /* width: 100%; */
+    background-color: #eceff1;
+    /* justify-content: flex-start; */
+
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    /* Two columns: sidebar and main panel */
     height: 100vh;
     width: 100%;
     background-color: #eceff1;
 }
 
-.sidebar{
-    width: 15%;
+.sidebar {
+    grid-column: 1;
     background-color: #fff;
+    position: fixed;
 }
 
-.main-panel{
+.main-panel {
+    grid-column: 2;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.main-panel .content{
+.main-panel .content {
     flex: 1;
     padding: 20px;
 }

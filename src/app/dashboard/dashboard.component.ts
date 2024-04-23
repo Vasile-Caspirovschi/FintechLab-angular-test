@@ -3,6 +3,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import Chart from 'chart.js/auto';
+import { Store, select } from '@ngrx/store';
+import { UserState } from '../store/user/state';
+import { User } from '../store/user/user.interface';
+import { selectLoggedUser } from '../store/user/selectors';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,9 +17,17 @@ import Chart from 'chart.js/auto';
 })
 
 export class DashboardComponent implements OnInit {
+  loggedUser: User | null = null;
   chart: any = [];
 
+  constructor(private store: Store<{ auth: UserState }>) { }
+
   ngOnInit(): void {
+    this.store.pipe(select(selectLoggedUser)).subscribe(user => {
+      this.loggedUser = user;
+    });
+
+
     const labels = ['Jan', 'Feb', 'Mar', 'Apr'];
     const data = [2.5, 1.4, 6, 4];
     new Chart('lineChart', {
@@ -51,4 +63,6 @@ export class DashboardComponent implements OnInit {
       }
     });
   }
+
+
 }
